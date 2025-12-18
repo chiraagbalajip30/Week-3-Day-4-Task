@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auth UI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="auth-container">
+
+    <!-- SIGNUP -->
+    <form id="signupForm" class="card">
+      <h2>Create Account</h2>
+
+      <label for="signupName">Name</label>
+      <input type="text" id="signupName" required />
+
+      <small class="error"></small>
+
+      <label for="signupEmail">Email</label>
+      <input id="signupEmail" type="email" required />
+
+      <small class="error"></small>
+
+      <label for="signupPassword">Password</label>
+      <input id="signupPassword" type="password" required />
+
+      <small class="error"></small>
+
+      <button type="submit">Sign Up</button>
+
+      <p class="switch">
+        Already have an account?
+        <span id="goLogin">Login</span>
+      </p>
+    </form>
+
+    <!-- LOGIN -->
+    <form id="loginForm" class="card hidden">
+      <h2>Login</h2>
+
+      <p id="signupSuccess" class="success hidden">
+        Account created successfully. Please login.
+      </p>
+
+      <label for="loginEmail">Email</label>
+      <input id="loginEmail" type="email" required />
+
+      <small class="error"></small>
+
+      <label for="loginPassword">Password</label>
+      <input id="loginPassword" type="password" required />
+
+      <small class="error"></small>
+
+      <button type="submit">Login</button>
+
+      <p class="switch">
+        Don't have an account?
+        <span id="goSignup">Sign Up</span>
+      </p>
+    </form>
+
+    <!-- WELCOME -->
+    <div id="welcomeBox" class="card hidden">
+      <h2 id="welcomeText"></h2>
+      <button id="logoutBtn">Logout</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
